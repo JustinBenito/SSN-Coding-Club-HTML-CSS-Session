@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSN GPT</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="flex ">
-    <div class="w-full">
-        <div class="flex flex-row">
-            <!-- Chat prompts -->
-            <div class="w-1/4 bg-gray-100 px-4 py-6 hidden sm:block">
-                <h2 class="text-lg font-bold mb-4">Prompts</h2>
-                <ul>
-                    <li class="mb-2">Prompt 1</li>
-                    <li class="mb-2">Prompt 2</li>
-                    <li class="mb-2">Prompt 3</li>
-                </ul>
-            </div>
-            <!-- Chat box -->
-            <div class="sm:w-3/4 w-full h-screen bg-white px-6 py-8 flex flex-col justify-between">
-                <!-- Messages container -->
-                <div class="mb-4">
-                    <h1 class="mb-4 font-bold text-2xl "> <span class="text-blue-800 italic">SSN</span> GPT</h1>
-                    <!-- Example message -->
-                    <div class="bg-blue-100 text-gray-800 rounded-lg p-3 mb-2">
-                        <div class="flex gap-4 items-center">
-                            <img src="chat-gpt.png" alt="" class="w-8 h-8">
-                            <p class="">Hello! How can I assist you today?</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SSN GPT</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="flex ">
+        <div class="w-full">
+            <div class="flex flex-row">
+                <!-- Chat prompts -->
+                <div class="w-1/4 bg-gray-100 px-4 py-6 hidden" style="display:flex;flex-direction: column;align-items: center;">
+                    <button class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">New Chat</button>
+                    <br><br>
+                    <div class="history"></div>
+                </div>
+                <!-- Main section  -->
+                <div class="sm:w-3/4 w-full h-screen bg-white px-6 py-8 flex flex-col justify-between">
+                    <!-- Messages container -->
+                    <div class="mb-4">
+                        <h1 class="mb-4 font-bold text-2xl "> <span class="text-blue-800 italic">SSN</span> GPT</h1>
+                        <div class="bg-blue-100 text-gray-800 rounded-lg p-3 mb-2">
+                            <div class="flex gap-4 items-center">
+                                <img src="chat-gpt.png" alt="" class="w-8 h-8">
+                                <p>Hello! How can I assist you today?</p>
+                            </div>
                         </div>
+                        <div class="chat-container" style="overflow-y:auto;max-height: 55vh;"></div>
                     </div>
-                    <!-- Add more messages here -->
-                </div>
-                <!-- Text input field -->
-                <div class="flex items-center">
-                    <input type="text" placeholder="Message SSN GPT..." class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none">
-                    <button class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">Send</button>
-                </div>
+                    <!-- Text input field -->
+                    <div class="flex items-center">
+                        <input type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none">
+                        <button id="submit" class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">Send</button>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
